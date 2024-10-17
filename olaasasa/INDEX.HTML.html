@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me & Education</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000000;
+            color: #f7f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #00d1b2;
+        }
+
+        /* About Me Section */
+        .about-section {
+            display: flex;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .profile-pic {
+            margin-right: 20px;
+        }
+
+        .profile-pic img {
+            border-radius: 50%;
+            max-width: 150px;
+        }
+
+        .about-text h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Education Section */
+        .education-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            margin-top: 60px;
+            background-color: #111;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .text-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .education-section h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .education-section p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .image {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .image img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Work Experience Section */
+        .container-work {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            margin-top: 60px;
+        }
+
+        .content-work {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            max-width: 700px;
+        }
+
+        .content-work h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .content-work p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        /* Pagination and Contact */
+        .pagination {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .pagination a {
+            display: inline-block;
+            margin: 10px 15px;
+            padding: 10px 20px;
+            background-color: #545050;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .pagination a:hover {
+            background-color: #00d1b2;
+        }
+
+        .dots {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .dots span {
+            height: 10px;
+            width: 10px;
+            margin: 0 5px;
+            background-color: #000000;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .dots span:hover {
+            background-color: #00d1b2;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about-section, .education-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-pic, .image {
+                margin-bottom: 20px;
+            }
+
+            .education-section h1 {
+                font-size: 28px;
+            }
+
+            .education-section p {
+                font-size: 16px;
+            }
+
+            .image img {
+                max-width: 400px;
+            }
+        }
+
+        /* Additional CSS for Second Section */
+        .new-section {
+            background-color: #1a1a1a;
+            color: white;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .new-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+            margin-top: 280px;
+        }
+
+        .new-container img {
+            width: 250px;
+            height: auto;
+        }
+
+        .new-container p {
+            text-align: center;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        .new-nav {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            width: 96%;
+            padding: 42px;
+            background-color: #282828;
+            position: fixed;
+            top: 0;
+            z-index: 10;
+        }
+
+        .new-nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 20px;
+        }
+
+        .new-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .new-dots {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            background-color: #c5c5c5;
+            border-radius: 50%;
+        }
+
+        .new-pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .new-pagination a {
+            color: #00d1b2;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .new-pagination a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: #282828;
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .contact-info a {
+            color: #00d1b2;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <a href="my-work.html">My Work</a>
+            <a href="about-me.html">About Me</a>
+            <a href="education.html">Education</a>
+            <a href="work-experience.html">Work Experience</a>
+            <a href="cover.html">Cover</a>
+        </nav>
+
+        <!-- About Me Section -->
+        <div class="about-section">
+            <div class="profile-pic">
+                <img src="https://cdn-icons-png.flaticon.com/128/2409/2409387.png" alt="Apresentação do Raul Neto">
+            </div>
+            <div class="about-text">
+                <h1>About Me</h1>
+                <p>Olá, meu nome é Raul Macêdo de Sena Neto. Tenho 23 anos e tenho um hobby de programar. Sou um programador front-end iniciando minha carreira como programador de sites. Comecei minha carreira como estudante de ensino médio em escola pública quando tinha 17 anos e até hoje me identifico como um front-end.</p>
+            </div>
+        </div>
+
+        <!-- Education Section -->
+        <div class="education-section">
+            <div class="image">
+                <img src="https://cdn-icons-png.flaticon.com/128/644/644617.png" alt="Student studying">
+            </div>
+            <div class="text-content">
+                <h1>Education</h1>
+                <p>Faculdade de Ciência da Computação</p>
+                <p>Uninorte-AM / Previsão de Conclusão: 2025</p>
+            </div>
+        </div>
+
+        <!-- Work Experience Section -->
+        <div class="container-work">
+            <div class="content-work">
+                <h1>Work Experience</h1>
+                <p>Estagiário - Professor de informática básica no projeto de extensão CodeLand - Uninorte</p>
+                        </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <a href="#">Previous</a>
+            <a href="#">Next</a>
+        </div>
+
+        <!-- Dots for Section Indicators -->
+        <div class="dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+            <a href="https://www.linkedin.com/in/raul-mac%C3%AAdo-aaa457249/" target="www.linkedin.com/in/raul-macêdo-aaa457249">LinkedIn</a>
+            <a href="mailto:raulneto@gmail.com">raulneto@gmail.com</a>
+        </div>
+    </div>
+</body>
+</html>
