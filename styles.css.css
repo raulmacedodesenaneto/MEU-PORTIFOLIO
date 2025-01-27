@@ -1,0 +1,74 @@
+/* Reset básico */
+* {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                }
+                
+                body {
+                    font-family: 'Arial', sans-serif;
+                    line-height: 1.6;
+                    background-color: #f4f4f4;
+                    color: #333;
+                }
+                
+                header {
+                    background: #007BFF; /* Cor de fundo do cabeçalho */
+                    color: #fff; /* Cor do texto */
+                    padding: 20px 0; /* Espaçamento interno */
+                    text-align: center; /* Centraliza o texto */
+                    position: relative; /* Para permitir o posicionamento absoluto da imagem */
+                }
+                
+                header h1 {
+                    margin-bottom: 10px; /* Espaçamento abaixo do título */
+                }
+                
+                header p {
+                    margin-bottom: 10px; /* Espaçamento abaixo do parágrafo */
+                }
+                
+                header img {
+                    position: absolute; /* Posiciona a imagem de forma absoluta */
+                    right: 20px; /* Distância da borda direita */
+                    top: 20px; /* Distância do topo */
+                    width: 100px; /* Ajuste o tamanho conforme necessário */
+                    height: auto; /* Mantém a proporção da imagem */
+                    border-radius: 50%; /* Torna a imagem redonda */
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+                }
+                
+                nav ul {
+                    list-style: none; /* Remove os marcadores da lista */
+                    padding: 0; /* Remove o preenchimento */
+                }
+                
+                nav ul li {
+                    display: inline; /* Exibe os itens da lista em linha */
+                    margin: 0 15px; /* Espaçamento entre os itens */
+                }
+                
+                nav ul li a {
+                    color: #fff; /* Cor do texto dos links */
+                    text-decoration: none; /* Remove o sublinhado */
+                }
+                
+                nav ul li a:hover {
+                    text-decoration: underline; /* Sublinha o link ao passar o mouse */
+                }
+                
+                section {
+                    padding: 20px; /* Espaçamento interno */
+                    margin: 20px; /* Margem externa */
+                    background: #fff; /* Cor de fundo da seção */
+                    border-radius: 8px; /* Bordas arredondadas */
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+                }
+                
+                .projeto {
+                    border: 1px solid #ccc; /* Borda da seção de projeto */
+                    padding: 10px; /* Espaçamento interno */
+                    margin: 10px 0; /* Margem externa */
+                    border-radius: 5px; /* Bordas arredondadas */
+                    background: #f9f9f9; /* Cor de fundo do projeto */
+                }   
